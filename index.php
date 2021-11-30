@@ -27,7 +27,7 @@
     </header>
     <div id="grid-users" class="grid-container"></div>
   </section>
-<!-- ekstra kommentar - slet gerne igen -->
+
   <!-- create user page -->
   <section id="create" class="page">
     <header class="topbar">
