@@ -42,21 +42,13 @@
     </a>
   </nav>
 
-  <!-- pages -->
-  <!-- home page -->
-  <section id="products" class="page">
-    <header class="topbar">
+  <!-- pages --------------------------------------------------------->
+  <!-- home page------------------------------------------------------>
+  <header class="topbar">
       <h2><?php echo $loginMail ?></h2>
     </header>
+  <section id="products" class="page">
     <section class="tools-grid">
-      <label for="sortBy">Order by:
-        <select id="sortBy" onchange="orderBy(this.value)">
-          <option value="" selected disabled>Choose here</option>
-          <option value="brand">Brand</option>
-          <option value="model">Model</option>
-          <option value="price">Price</option>
-        </select>
-      </label>
       <label for="outOfStock" class="checkmark-container">Show out of stock
         <input type="checkbox" id="outOfStock" onchange="showHideOfStock(this.checked)" checked>
         <span class="checkmark"></span>
@@ -66,7 +58,7 @@
     <section id="products-container" class="grid-container"></section>
   </section>
 
-  <!-- create page -->
+  <!-- create page --------------------------------------------------->
   <section id="add" class="page">
     <header class="topbar">
       <h2>Add New Product</h2>
@@ -80,12 +72,8 @@
     </form>
   </section>
 
-  <!-- edit page -->
+  <!-- edit page ---------------------------------------------------->
   <section id="edit" class="page">
-    <header class="topbar">
-      <a class="left" class="nav-link" href="#/products">Back</a>
-      <h2>Edit Product</h2>
-    </header>
     <form>
       <input id="brandEdit" type="text" name="brand" placeholder="Brand">
       <input id="modelEdit" type="text" name="model" placeholder="Model">
@@ -97,13 +85,13 @@
 
   <!-- edit page -->
   <section id="detail-view" class="page">
-    <header class="topbar">
-      <a class="left" class="nav-link" href="#/products">Back</a>
-      <h2 class="title">Product</h2>
-    </header>
     <section id="detail-view-container"></section>
   </section>
 
+  <!-- Profile page ------------------------------------------------>
+  <section id="profile" class="page">
+    
+  </section>
   <!-- loader  -->
   <section id="loader">
     <section class="spinner"></section>
