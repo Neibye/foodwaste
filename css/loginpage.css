@@ -1,0 +1,80 @@
+body {
+    background-color: #f7f7f7;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    color: #333333;
+}
+
+.loginpage {
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+}
+.loginpageLogo {
+    max-width: 219px;
+    height: 48px;
+    margin-bottom: 82px;
+}
+.loginpageContent {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+}
+
+form {
+    margin: auto;
+    padding: 0 12%;
+  }
+form h1 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+  form button{
+    padding: 12px 15px;
+    font-size: 1em;
+    width: 100%;
+    max-width: 350px;
+  }
+  
+   button {
+    font-weight: 300;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    color: var(--text-color-light);
+  
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: .5em 1em;
+    font-size: .8em;
+  }
+  
+  input {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 17px 19px;
+    box-sizing: border-box;
+    display: block;
+    background: #ffffff;
+    border: 0;
+    box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.05) inset;
+    border-radius: 6px;
+  }
+  input::placeholder {
+      font-size: 16px;
+      color: #868686;
+  }
+  .submitBtn {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: #026B00;
+    color: #ffffff;
+    font-size: 16px;
+  }

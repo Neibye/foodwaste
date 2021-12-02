@@ -45,7 +45,7 @@
   <!-- pages --------------------------------------------------------->
   <!-- home page------------------------------------------------------>
   <header class="topbar">
-      <h2><?php echo $loginMail ?></h2>
+      <h1><?php echo $loginMail ?></h1>
     </header>
   <section id="products" class="page">
     <section class="tools-grid">
@@ -90,7 +90,7 @@
 
   <!-- Profile page ------------------------------------------------>
   <section id="profile" class="page">
-    
+
   </section>
   <!-- loader  -->
   <section id="loader">

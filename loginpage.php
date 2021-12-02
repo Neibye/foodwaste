@@ -12,16 +12,18 @@
     <link rel="shortcut icon" type="image/svg" href="img/fineFood.svg" />
 </head>
 <body>
-<div class="form flex alignCenter spaceAround">
-    <form action="backend/login.php" method="post">
-        <h2>Login</h2>
-        Mail:<br>
-        <input type="text" name="loginMail" required><br><br>
-        Password:<br>
-        <input type="password" minlength="8" name="loginPassword" required><br><br>
-        <input type="submit" value="Login">
-        <p>Not a user? <a href="registration.php">Register here</a></p> 
-        </form>
-</div>
+    <div class="loginpage">
+        <div class="loginpageContent">
+            <img class="loginpageLogo" src="img/fineFood.svg" alt="Logo fineFood">
+            <div class="form flex alignCenter spaceAround">
+                <form action="backend/login.php" method="post">
+                    <h1>Login partner</h1>
+                    <input type="text" name="loginMail" required placeholder="E-mail">
+                    <input type="password" minlength="8" name="loginPassword" required placeholder="Password">
+                    <input class="submitBtn" type="submit" value="Login">
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
