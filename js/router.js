@@ -3,9 +3,10 @@
  * "path": "id of page in DOM"
  */
 const _routes = {
-    "#/": "users",
-    "#/create": "create",
-    "#/update": "update"
+    "#/products": "products",
+    "#/add": "add",
+    "#/edit": "edit",
+    "#/detail-view": "detail-view"
 };
 const _pages = document.querySelectorAll(".page");
 const _basePath = location.pathname.replace("index.html", ""); // remove index.html from path
@@ -28,6 +29,9 @@ function navigateTo(path) {
     showPage(path);
 }
 
+/**
+ * Displaying page by given path
+ */
 function showPage(path) {
     hideAllPages(); // hide all pages
     document.querySelector(`#${_routes[path]}`).style.display = "block"; // show page by given path
@@ -68,7 +72,7 @@ function initRouter() {
     attachNavLinkEvents();
     window.addEventListener("popstate", () => showPage(location.hash)); // change page when using back and forth in browser
 
-    let path = "#/"; // default path
+    let path = "#/products"; // default path
     if (_routes[location.hash]) {
         path = location.hash;
     }
