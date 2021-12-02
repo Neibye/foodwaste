@@ -1,13 +1,14 @@
 <?php
   session_start();
   $loginMail = $_SESSION['post_loginMail'];
+  $loginMail = $_SESSION['post_loginMail'];
   
 ?>
 <?php
-if($loginMail != null && $loginPassword != null) {
+/*if($loginMail != null && $loginPassword != null) {
   header("location: match.php");
   exit;
-} else {
+} else {*/
   ?>
 <!doctype html>
 <html lang="en">
@@ -32,7 +33,7 @@ if($loginMail != null && $loginPassword != null) {
       <div><p>Profil</p></div>
     </a>
     <a class="nav-link" href="#/products">
-      <div><img src="img/products.png" alt="plus image"></div>
+      <div><img src="img/home.png" alt="plus image"></div>
       <div><p>Home</p></div>
     </a>
     <a class="nav-link" href="#/add">
@@ -115,7 +116,7 @@ if($loginMail != null && $loginPassword != null) {
   <script src="js/app.js"></script>
 </body>
 <?php
-}
+//}
 ?>
 
   
@@ -125,6 +126,5 @@ if($loginMail != null && $loginPassword != null) {
     header("location: index.php");
     exit;
 }*/
-session_destroy();
 ?>
 </html>
