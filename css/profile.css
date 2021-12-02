@@ -1,0 +1,32 @@
+p {
+  margin-left: 12%;
+  margin-right: 12%;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+button {
+  margin-left: 12%;
+  margin-right: 12%;
+  border-radius: 6px;
+}
+
+#changePasswordButton {
+  background-color: #c6c6c6;
+  text-transform: none;
+  margin-bottom: 20px;
+}
+
+#logOutButton {
+  background-color: #a60000;
+  color: white;
+  text-transform: none;
+}
+
+input {
+  border-radius: 6px;
+  margin-left: 12%;
+  margin-left: 12%;
+}

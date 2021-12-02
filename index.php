@@ -22,6 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/profile.css">
   <link rel="shortcut icon" type="image/svg" href="img/fineFood.svg" />
 </head>
 
@@ -90,6 +91,18 @@
 
   <!-- Profile page ------------------------------------------------>
   <section id="profile" class="page">
+
+<div style="margin-top:15vw;">
+  <p>Skift kodeord</p>
+  <form action="">
+    <input placeholder="Nyt kodeord" type="password">
+    <input placeholder="Gentag kodeord" type="password">
+  </form>
+  <div class="flex-col">
+  <button id="changePasswordButton">Skift kodeord</button>
+  <button id="logOutButton">Log ud</button>
+  </div>
+</div>
     
   </section>
   <!-- loader  -->
