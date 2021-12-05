@@ -1,22 +1,13 @@
-p {
-  margin-left: 12%;
-  margin-right: 12%;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-button {
-  margin-left: 12%;
-  margin-right: 12%;
-  border-radius: 6px;
+.col-pad {
+  margin: auto;
+  padding: 0 12%;
+  height: 100%;
+  margin-bottom: 32px;
 }
 
 #changePasswordButton {
   background-color: #c6c6c6;
   text-transform: none;
-  margin-bottom: 20px;
 }
 
 #logOutButton {
@@ -24,9 +15,66 @@ button {
   color: white;
   text-transform: none;
 }
+form {
+  margin-bottom: 52px;
+}
+form h1 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+form button{
+  padding: 12px 15px;
+  font-size: 1em;
+  width: 100%;
+  max-width: 350px;
+}
+
+ button {
+  font-weight: 300;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 0;
+  color: var(--text-color-light);
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: .5em 1em;
+  font-size: .8em;
+}
 
 input {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 17px 19px;
+  box-sizing: border-box;
+  display: block;
+  background: #ffffff;
+  border: 0;
+  box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.05) inset;
   border-radius: 6px;
-  margin-left: 12%;
-  margin-left: 12%;
+}
+input::placeholder {
+    font-size: 16px;
+    color: #868686;
+}
+
+#logoutBtn {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: #a60000;
+  color: white;
+  font-size: 16px;
+  padding: 12px 15px;
+  font-size: 1em;
+  max-width: 350px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.profilepage-content {
+  margin-top:15vw;
+}
+.profilepage-content p {
+  font-size: 20px;
 }
