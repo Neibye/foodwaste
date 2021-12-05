@@ -1,14 +1,15 @@
 <?php
   session_start();
   $loginMail = $_SESSION['post_loginMail'];
-  $loginMail = $_SESSION['post_loginMail'];
+  $partnerName = $_SESSION['partnerName'];
   
 ?>
 <?php
-/*if($loginMail != null && $loginPassword != null) {
-  header("location: match.php");
+if($loginMail == null) {
+  header("location: loginpage.php");
+  session_destroy();
   exit;
-} else {*/
+} else {
   ?>
 <!doctype html>
 <html lang="en">
@@ -46,7 +47,7 @@
   <!-- pages --------------------------------------------------------->
   <!-- home page------------------------------------------------------>
   <header class="topbar">
-      <h1><?php echo $loginMail ?></h1>
+      <h1><?php echo $partnerName ?></h1>
     </header>
   <section id="products" class="page">
     <section class="tools-grid">
@@ -100,7 +101,7 @@
   </form>
   <div class="flex-col">
   <button id="changePasswordButton">Skift kodeord</button>
-  <button id="logOutButton">Log ud</button>
+  <a href="backend/backend.php?id=logout">Logout</a>
   </div>
 </div>
     
@@ -122,10 +123,6 @@
 
   
 <?php
-/*}
-  else {
-    header("location: index.php");
-    exit;
-}*/
+}
 ?>
 </html>
