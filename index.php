@@ -90,21 +90,25 @@
   </section>
 
   <!-- Profile page ------------------------------------------------>
-  <section id="profile" class="page">
 
-<div style="margin-top:15vw;">
-  <p>Skift kodeord</p>
-  <form action="">
-    <input placeholder="Nyt kodeord" type="password">
-    <input placeholder="Gentag kodeord" type="password">
-  </form>
-  <div class="flex-col">
-  <button id="changePasswordButton">Skift kodeord</button>
-  <button id="logOutButton">Log ud</button>
-  </div>
-</div>
-    
+
+
+  <section id="profile" class="page">
+    <div class="profilepage">
+      <div class="">
+          <h3 id="changePasswordH3">Skift kodekord</h3>
+          <form action="" method="post">
+            <input type="password" placeholder="Nyt kodeord">
+            <input type="password" placeholder="Gentag nyt kodeord">
+            <input class="changePasswordBtn" type="submit" value="Skift kodeord">
+            <input class="logOutBtn" type="submit" value="Log ud">
+          </form>
+          <img id="profileLogo" src="img/fineFood.svg" alt="FineFood">
+      </div>
+    </div>
   </section>
+
+  
   <!-- loader  -->
   <section id="loader">
     <section class="spinner"></section>
