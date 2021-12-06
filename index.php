@@ -102,7 +102,7 @@ if($loginMail == null) {
     <button id="changePasswordButton">Skift kodeord</button>
     <a id="logoutBtn" href="backend/backend.php?id=logout">Logout</a>
   </form>
-  
+  <img class="profileImg" src="img/fineFood.svg" alt="Logo fineFood">
 </div>
     
   </section>
