@@ -86,20 +86,19 @@ if($loginMail == null) {
   </section>
 
   <!-- edit page -->
-  <section id="detail-view" class="page">
-    <section id="detail-view-container"></section>
-  </section>
+  
 
   <!-- Profile page ------------------------------------------------>
-
+<section id="profile" class="page">
 <div class="profilepage-content col-pad">
   <p>Skift kodeord</p>
   <form action="">
     <input placeholder="Nyt kodeord" type="password">
     <input placeholder="Gentag kodeord" type="password">
     <button id="changePasswordButton">Skift kodeord</button>
+    <a id="logoutBtn" href="backend/backend.php?id=logout">Logout</a>
   </form>
-  <a id="logoutBtn" href="backend/backend.php?id=logout">Logout</a>
+  
 </div>
     
   </section>
