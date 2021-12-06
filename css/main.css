@@ -393,3 +393,22 @@ select {
   padding: 1em;
   gap: 1em;
 }
+
+/* ---------- ADD products section ---------- */
+
+.addProductsForm {
+  position: relative;
+  top: 70px;
+}
+#datoForUdlob {
+  color: var(--grey);
+  font-size: 14px;
+}
+input::placeholder {
+  color: red;
+  font-size: 14px;
+}
+
+.flex {
+  display: flex;
+}

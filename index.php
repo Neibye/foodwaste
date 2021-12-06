@@ -58,21 +58,24 @@ if($loginMail == null) {
       <input type="search" placeholder="Search" onkeyup="search(this.value)" onsearch="search('')">
     </section>
     <section id="products-container" class="grid-container"></section>
+    
   </section>
 
   <!-- create page --------------------------------------------------->
-  <section id="add" class="page col-pad">
+  <section id="add" class="page">
     
-      
-   <form action="uploadProduct.php" method="post" enctype="multipart/form-data">
+   <form class="addProductsForm col-pad" action="uploadProduct.php" method="post" enctype="multipart/form-data">
       
       <input type="text" id="produktNavn" name="produktNavn" placeholder="Navn på produkt"/>
       <input type="text" id="KategoriV" name="KategoriV" placeholder="Kategori"/>
       <input type="number" id="amount" name="amount" placeholder="Antal"/>
-      <input type="date" id="datoForUdløb" name="datoForUdløb" placeholder="Udløbsdato"/>
+      <input type="date" id="datoForUdlob" name="datoForUdløb" placeholder="Udløbsdato"/>
       <input type="text" id="newPrice" name="newPrice" placeholder="Ny pris"/>
+      
+      <div class="flex">
       <a href="index.html"><button type="button">tilbage</button></a>
       <input type="submit" onclick="" value="Opret Produkt" name="opretProdukt"/>
+      </div>
       <!-- Onclick skal have tilføjet en funktion -->
     </form>
   </section>
