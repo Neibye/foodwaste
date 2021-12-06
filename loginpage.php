@@ -16,7 +16,7 @@
         <div class="loginpageContent">
             <img class="loginpageLogo" src="img/fineFood.svg" alt="Logo fineFood">
             <div class="form flex alignCenter spaceAround">
-                <form action="backend/login.php" method="post">
+                <form class="col-pad" action="backend/login.php" method="post">
                     <h1>Login partner</h1>
                     <input type="text" name="loginMail" required placeholder="E-mail">
                     <input type="password" minlength="8" name="loginPassword" required placeholder="Password">

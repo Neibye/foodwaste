@@ -27,10 +27,11 @@ body {
     width: 100%;
 }
 
-form {
+.col-pad {
     margin: auto;
     padding: 0 12%;
-  }
+}
+
 form h1 {
     font-size: 24px;
     font-weight: 400;
