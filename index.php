@@ -73,8 +73,7 @@ if($loginMail == null) {
       <input type="text" id="newPrice" name="newPrice" placeholder="Ny pris"/>
       
       <div class="flex">
-      <a href="index.html"><button type="button">tilbage</button></a>
-      <input type="submit" onclick="" value="Opret Produkt" name="opretProdukt"/>
+      <input id="submitProduct" type="submit" onclick="" value="Opret Produkt" name="opretProdukt"/>
       </div>
       <!-- Onclick skal have tilføjet en funktion -->
     </form>
