@@ -64,43 +64,15 @@ if($loginMail == null) {
   <section id="add" class="page col-pad">
     
       
-   <form
-      action="uploadProduct.php"
-      method="post"
-      enctype="multipart/form-data"
-    >
-      <input
-        type="text"
-        id="produktNavn"
-        name="produktNavn"
-        placeholder="Navn på produkt"
-      />
-      <input
-        type="text"
-        id="KategoriV"
-        name="KategoriV"
-        placeholder="Kategori"
-      />
-      <input
-        type="number"
-        id="amount"
-        name="amount"
-        placeholder="Antal"
-      />
-      <input
-        type="date"
-        id="datoForUdløb"
-        name="datoForUdløb"
-        placeholder="Udløbsdato"
-      />
+   <form action="uploadProduct.php" method="post" enctype="multipart/form-data">
+      
+      <input type="text" id="produktNavn" name="produktNavn" placeholder="Navn på produkt"/>
+      <input type="text" id="KategoriV" name="KategoriV" placeholder="Kategori"/>
+      <input type="number" id="amount" name="amount" placeholder="Antal"/>
+      <input type="date" id="datoForUdløb" name="datoForUdløb" placeholder="Udløbsdato"/>
       <input type="text" id="newPrice" name="newPrice" placeholder="Ny pris"/>
       <a href="index.html"><button type="button">tilbage</button></a>
-      <input
-        type="submit"
-        onclick=""
-        value="Opret Produkt"
-        name="opretProdukt"
-      />
+      <input type="submit" onclick="" value="Opret Produkt" name="opretProdukt"/>
       <!-- Onclick skal have tilføjet en funktion -->
     </form>
   </section>
