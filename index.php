@@ -58,25 +58,19 @@ if($loginMail == null) {
       <input type="search" placeholder="Search" onkeyup="search(this.value)" onsearch="search('')">
     </section>
     <section id="products-container" class="grid-container"></section>
-    
   </section>
 
   <!-- create page --------------------------------------------------->
   <section id="add" class="page">
-    
-   <form class="addProductsForm col-pad" action="uploadProduct.php" method="post" enctype="multipart/form-data">
-      
-      <input type="text" id="produktNavn" name="produktNavn" placeholder="Navn på produkt"/>
-      <input type="text" id="KategoriV" name="KategoriV" placeholder="Kategori"/>
-      <input type="number" id="amount" name="amount" placeholder="Antal"/>
-      <input type="date" id="datoForUdlob" name="datoForUdløb" placeholder="Udløbsdato"/>
-      <input type="text" id="newPrice" name="newPrice" placeholder="Ny pris"/>
-      
-      <div class="flex">
-      <a href="index.html"><button type="button">tilbage</button></a>
-      <input type="submit" onclick="" value="Opret Produkt" name="opretProdukt"/>
-      </div>
-      <!-- Onclick skal have tilføjet en funktion -->
+    <header class="topbar">
+      <h2>Add New Product</h2>
+    </header>
+    <form>
+      <input id="brand" type="text" name="brand" placeholder="Brand">
+      <input id="model" type="text" name="model" placeholder="Model">
+      <input id="price" type="text" name="price" placeholder="Price">
+      <input id="img" type="text" name="img" placeholder="Image URL">
+      <button type="button" name="button" onclick="addNewProduct()">Save</button>
     </form>
   </section>
 
@@ -104,7 +98,6 @@ if($loginMail == null) {
     <button id="changePasswordButton">Skift kodeord</button>
     <a id="logoutBtn" href="backend/backend.php?id=logout">Logout</a>
   </form>
-  <img class="profileImg" src="img/fineFood.svg" alt="Logo fineFood">
   
 </div>
     
