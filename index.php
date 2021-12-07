@@ -100,7 +100,7 @@ if($loginMail == null) {
     <input class="submitBtn" id="changePasswordButton" type="submit" value="Skift kodeord" placeholder="Skift kodeord">
     <a id="logoutBtn" href="backend/backend.php?id=logout">Logout</a>
   </form>
-  
+  <img class="profileImg" src="img/fineFood.svg" alt="Logo fineFood">
 </div>
     
   </section>
