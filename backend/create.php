@@ -1,6 +1,13 @@
 <?php
     include("mysql.php");
 
+if (!isset($_POST['action'])) {
+    header("location: ../registration.php?unautharised-user");
+    exit;
+}
+
+if ($_POST['action'] == "create") {
+
     if($_POST["name"] == "") {
         header("location: registration.php?error=name");
         exit;
@@ -24,26 +31,26 @@
     }
 
 
+    $name = $_POST['name'];
+    $postnr = $_POST['postnr'];
+    $by = $_POST['by'];
+    $mail = $_POST['mail'];
+    $lowerCaseMail = strtolower($mail);
+    $password = $_POST['password'];
 
+    $passEncrypt = password_hash($password, PASSWORD_DEFAULT);
 
-$name = $_POST['name'];
-$postnr = $_POST['postnr'];
-$by = $_POST['by'];
-$mail = $_POST['mail'];
-$lowerCaseMail = strtolower($mail);
-$password = $_POST['password'];
+    $CreateNewPartner = "CALL CreateNewPartner('$name', '$postnr', '$by', '$mail', '$passEncrypt')";
 
-$passEncrypt = password_hash($password, PASSWORD_DEFAULT);
-
-$CreateNewPartner = "CALL CreateNewPartner('$name', '$postnr', '$by', '$mail', '$passEncrypt')";
-
-if ($mySQL->query($CreateNewPartner) === TRUE) {
-    header("location: ../loginpage.php?signup=succes");
-    exit;
-} else {
-    header("location: registration.php?signup=failed");
-    exit;
+    if ($mySQL->query($CreateNewPartner) === TRUE) {
+        header("location: ../loginpage.php?signup=succes");
+        exit;
+    } else {
+        header("location: registration.php?signup=failed");
+        exit;
+    } 
 }
+
 
 
 

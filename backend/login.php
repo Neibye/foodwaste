@@ -10,6 +10,29 @@ include("mysql.php");
         header("location: loginpage.php?error=Password");
         exit;
     }
+
+
+$foodGroupsSQL = "SELECT DISTINCT foodGroup FROM foodlist";
+
+$allFoodGroups = [];
+
+$foodGroupsResult = $mySQL->query($foodGroupsSQL);
+
+while($row = $foodGroupsResult->fetch_assoc()) {
+    if(!in_array($row, $allFoodGroups)) {
+        $allFoodGroups[] = $row;
+    }
+}
+
+
+$_SESSION['allFoodGroups'] = $allFoodGroups;
+
+
+
+
+
+
+
              
     $loginMail = $_POST['loginMail'];
     $loginPassword = $_POST['loginPassword'];
@@ -25,9 +48,10 @@ include("mysql.php");
         $passVerify = password_verify($loginPassword, $hashkey);
         if ($passVerify && $partnerLoginResult->mail = $loginMail) {
             $partnerId = $partnerLoginResult->id;
-            $partnerNameSQL = "SELECT navn FROM partners WHERE partnerLogin = $partnerId";
+            $partnerNameSQL = "SELECT navn, id FROM partners WHERE partnerLogin = $partnerId";
             $partnerNameResult = $mySQL->query($partnerNameSQL)->fetch_object();
             $_SESSION['partnerName'] = $partnerNameResult->navn;
+            $_SESSION['partnerId'] = $partnerNameResult->id;
             header("location: ../index.php");
             exit;
         } else {

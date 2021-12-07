@@ -2,9 +2,11 @@
   session_start();
   $loginMail = $_SESSION['post_loginMail'];
   $partnerName = $_SESSION['partnerName'];
+  $partnerId = $_SESSION['partnerId'];
+  $allFoodGroups = $_SESSION['allFoodGroups'];
+
+  $foodGroupsLength = count($allFoodGroups);
   
-?>
-<?php
 if($loginMail == null) {
   header("location: loginpage.php");
   session_destroy();
@@ -58,17 +60,26 @@ if($loginMail == null) {
   <!-- create page --------------------------------------------------->
   <section id="add" class="page">
     
-   <form class="addProductsForm col-pad" action="uploadProduct.php" method="post" enctype="multipart/form-data">
+   <form class="addProductsForm col-pad" action="backend/uploadProduct.php" method="post">
       
       <input type="text" id="produktNavn" name="produktNavn" placeholder="Navn på produkt"/>
-      <input type="text" id="KategoriV" name="KategoriV" placeholder="Kategori"/>
-      <input type="number" id="amount" name="amount" placeholder="Antal"/>
+      <select name="produktKategori" id="">
+        <?php 
+        for ($i=0; $i < $foodGroupsLength; $i++) {
+        ?>
+          <option value="<?php echo $allFoodGroups[$i]["foodGroup"] ?>"> <?php echo $allFoodGroups[$i]["foodGroup"] ?> </option>
+        <?php
+        }
+        
+        ?>
+      </select>
+      <input type="number" id="antal" name="antal" placeholder="Antal"/>
       <div class="udlob">
       <label for="datoForUdlob">Udløbsdato</label>
       <input type="date" id="datoForUdlob" name="datoForUdlob" placeholder="Udløbsdato"/>
       </div>
+      <input type="text" id="oldPrice" name="oldPrice" placeholder="Gammel pris"/>
       <input type="text" id="newPrice" name="newPrice" placeholder="Ny pris"/>
-      
       <div class="flex">
       <input id="submitProduct" type="submit" onclick="" value="Opret Produkt" name="opretProdukt"/>
       </div>

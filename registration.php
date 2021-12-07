@@ -10,6 +10,7 @@
 <body>
 <div class="form flex alignCenter spaceAround">
 <form action="backend/create.php" method="post">
+    <input type="hidden" name="action" value="create">
     <h2>Create user</h2>
         Navn på partner: <br>
         <input type="text" name="name" required><br><br>
