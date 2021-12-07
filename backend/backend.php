@@ -1,4 +1,3 @@
-
 <?php
 // Logout funktion
 session_start();
@@ -8,4 +7,7 @@ if ($_GET['id'] == "logout") {
     header("location: ../loginpage.php");
     exit;
 }
+
+
+
 ?>

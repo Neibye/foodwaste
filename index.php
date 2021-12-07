@@ -51,13 +51,8 @@ if($loginMail == null) {
     </header>
   <section id="products" class="page">
     <section class="tools-grid">
-      <label for="outOfStock" class="checkmark-container">Show out of stock
-        <input type="checkbox" id="outOfStock" onchange="showHideOfStock(this.checked)" checked>
-        <span class="checkmark"></span>
-      </label>
       <input type="search" placeholder="Search" onkeyup="search(this.value)" onsearch="search('')">
     </section>
-    <section id="products-container" class="grid-container"></section>
   </section>
 
   <!-- create page --------------------------------------------------->
@@ -68,7 +63,10 @@ if($loginMail == null) {
       <input type="text" id="produktNavn" name="produktNavn" placeholder="Navn på produkt"/>
       <input type="text" id="KategoriV" name="KategoriV" placeholder="Kategori"/>
       <input type="number" id="amount" name="amount" placeholder="Antal"/>
-      <input type="date" id="datoForUdlob" name="datoForUdløb" placeholder="Udløbsdato"/>
+      <div class="udlob">
+      <label for="datoForUdlob">Udløbsdato</label>
+      <input type="date" id="datoForUdlob" name="datoForUdlob" placeholder="Udløbsdato"/>
+      </div>
       <input type="text" id="newPrice" name="newPrice" placeholder="Ny pris"/>
       
       <div class="flex">
@@ -96,10 +94,10 @@ if($loginMail == null) {
 <section id="profile" class="page">
 <div class="profilepage-content col-pad">
   <p>Skift kodeord</p>
-  <form action="">
-    <input placeholder="Nyt kodeord" type="password">
-    <input placeholder="Gentag kodeord" type="password">
-    <button id="changePasswordButton">Skift kodeord</button>
+  <form action="backend/changePassword.php" method="post">
+    <input name="nytKodeord" placeholder="Nyt kodeord" type="password">
+    <input name="gentagKodeord" placeholder="Gentag kodeord" type="password">
+    <input class="submitBtn" id="changePasswordButton" type="submit" value="Skift kodeord" placeholder="Skift kodeord">
     <a id="logoutBtn" href="backend/backend.php?id=logout">Logout</a>
   </form>
   
@@ -109,9 +107,9 @@ if($loginMail == null) {
 
   
   <!-- loader  -->
-  <section id="loader">
+  <!-- <section id="loader">
     <section class="spinner"></section>
-  </section>
+  </section> -->
 
 
   <!-- SPA functionality  -->
