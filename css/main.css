@@ -136,7 +136,6 @@ img {
   /* padding equals height of tabbar and topbar */
 }
 
-
 /* input form stryling */
 form {
   margin: auto;
@@ -146,7 +145,6 @@ form button {
   padding: 12px 15px;
   font-size: 1em;
   width: 100%;
-
 }
 
 button {
@@ -172,7 +170,6 @@ input {
   background: var(--white);
   border: 0;
 }
-
 
 .addProductsForm {
   position: relative;
@@ -210,3 +207,50 @@ form label {
   right: 20%;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "nameBox nameBox"
+    "editBox deleteBox";
+}
+.nameBox {
+  grid-area: nameBox;
+  background-color: white;
+  border-radius: 5px 5px 0px 0px;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 4px 0px 12px;
+}
+
+.editBox {
+  grid-area: editBox;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 0px 0px 0px 5px;
+  height: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.deleteBox {
+  grid-area: deleteBox;
+  background-color: var(--buttonGrey);
+  border-radius: 0px 0px 5px 0px;
+  height: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
