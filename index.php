@@ -49,10 +49,17 @@ if($loginMail == null) {
   <header class="topbar">
       <h1><?php echo $partnerName ?></h1>
     </header>
-  <section id="products" class="page">
+    <input type="search" placeholder="Search" onkeyup="search(this.value)" onsearch="search('')">
+  <section id="products" class="page col-pad">
     <section class="tools-grid">
-      <input type="search" placeholder="Search" onkeyup="search(this.value)" onsearch="search('')">
+       <div class="container">
+         <div class="nameBox"><p>Arla letmælk</p><p>5kr</p></div>
+         <div class="editBox">Rediger</div>
+         <div class="deleteBox">Fjern</div>
+    </div>
     </section>
+   
+    
   </section>
 
   <!-- create page --------------------------------------------------->
