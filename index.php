@@ -51,8 +51,9 @@ if($loginMail == null) {
   <header class="topbar">
       <h1><?php echo $partnerName ?></h1>
     </header>
-    <input type="search" placeholder="Search" onkeyup="search(this.value)" onsearch="search('')">
+    
   <section id="products" class="page col-pad">
+  <input type="search" placeholder="Search" onkeyup="search(this.value)" onsearch="search('')">
     <section class="tools-grid">
        <div class="container">
          <div class="nameBox"><p>Arla letmælk</p><p>5kr</p></div>
