@@ -5,13 +5,14 @@
   $partnerId = $_SESSION['partnerId'];
   $allFoodGroups = $_SESSION['allFoodGroups'];
 
-  $foodGroupsLength = count($allFoodGroups);
+  
   
 if($loginMail == null) {
   header("location: loginpage.php");
   session_destroy();
   exit;
 } else {
+  $foodGroupsLength = count($allFoodGroups);
   ?>
 <!doctype html>
 <html lang="en">
