@@ -55,15 +55,9 @@ if($loginMail == null) {
     
   <section id="products" class="page col-pad">
   <input type="search" placeholder="Search" onkeyup="search(this.value)" onsearch="search('')">
-    <section class="tools-grid">
-       <div class="container">
-         <div class="nameBox"><p>Arla letmælk</p><p>5kr</p></div>
-         <div class="editBox">Rediger</div>
-         <div class="deleteBox">Fjern</div>
-    </div>
-    </section>
-   
-    
+    <!-- <div id="product-grid">
+
+    </div> -->
   </section>
 
   <!-- create page --------------------------------------------------->

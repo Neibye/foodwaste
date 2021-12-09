@@ -1,14 +1,17 @@
 <?php
+session_start();
+$partnerId = $_SESSION['partnerId'];
 include("mysql.php");
+
 class Product {
-    private $id = 0;
-    private $partnerId = "";
-    private $produktNavn = "";
-    private $produktKategori = "";
-    private $antal = 0;
-    private $datoForUdlob = 0;
-    private $oldPrice = 0;
-    private $newPrice = 0;
+    public $id = 0;
+    public $partnerId = "";
+    public $produktNavn = "";
+    public $produktKategori = "";
+    public $antal = 0;
+    public $datoForUdlob = 0;
+    public $oldPrice = 0;
+    public $newPrice = 0;
 
     public function GetId() {
         return $this->id;
@@ -97,16 +100,52 @@ foreach ($products as $value) {
     $product->SetId($value["id"]);
     $product->SetPartnerId($value["partnerId"]);
     $product->SetProductName($value["foodName"]);
-    $product->SetQuantity($value["foodGroup"]);
-    $product->SetProductCategori($value["quantity"]);
+    $product->SetQuantity($value["quantity"]);
+    $product->SetProductCategori($value["foodGroup"]);
     $product->SetExpDate($value["expDate"]);
     $product->SetOldPrice($value["oldPrice"]);
     $product->SetNewPrice($value["newPrice"]);
 
-     array_push($productArray, $product);
+    array_push($productArray, $product);
+
+        // createProduct($product->GetId, $product->GetPartnerId, $product->GetProductName, $product->GetProductCategori, $product->GetQuantity, $product->GetExpDate, $product->GetOldPrice, $product->GetNewPrice, )
+
 }
 
-var_dump($productArray);
+//var_dump($productArray[1]); 
+// echo $productArray[0]->produktNavn;
+
+$productMaxLength = count($productArray);
+// echo $productMaxLength;
+
+for ($i=0; $i < $productMaxLength; $i++) { 
+    $productIdValue = $productArray[$i]->id;
+    $partnerIdValue = $productArray[$i]->partnerId;
+    $productNameValue = $productArray[$i]->produktNavn;
+    $productCategoriValue = $productArray[$i]->produktKategori;
+    $productQuantityValue = $productArray[$i]->antal;
+    $expDateValue = $productArray[$i]->datoForUdlob;
+    $oldPriceValue = $productArray[$i]->oldPrice;
+    $newPriceValue = $productArray[$i]->newPrice;
+    echo "Produkt id = " . $productIdValue . "<br>";
+    echo "Partner id = " . $partnerIdValue . "<br>";
+    echo "Produkt navn = " . $productNameValue . "<br>";
+    echo "Produkt kategori = " . $productCategoriValue . "<br>";
+    echo "Antal = " . $productQuantityValue . "<br>";
+    echo "Udløbsdato = " . $expDateValue . "<br>";
+    echo "Gammel pris = " . $oldPriceValue . "<br>";
+    echo "Ny pris = " . $newPriceValue . "<br><br>";
+    ?>
+    <script> createProduct(<?php echo "$partnerIdValue"; ?>, <?php echo "$productNameValue"; ?>, <?php echo "$productCategoriValue"; ?>, <?php echo "$productQuantityValue"; ?>, <?php echo "$expDateValue"; ?>, <?php echo "$oldPriceValue"; ?>, <?php echo "$newPriceValue";  ?> )</script>
+   <?php
+}
+// foreach ($productArray as $product) {
+//     createProduct($product->GetId, $product->GetPartnerId, $product->GetProductName, $product->GetProductCategori, $product->GetQuantity, $product->GetExpDate, $product->GetOldPrice, $product->GetNewPrice)
+// }
+
+
+
+
 
 
 // $mainPerson;
@@ -145,3 +184,19 @@ var_dump($productArray);
 
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="product-grid"></div>
+    <script type="text/JavaScript" src="../js/updateJson.js"> 
+     
+     </script>
+</body>
+</html>
