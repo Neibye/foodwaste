@@ -30,7 +30,7 @@ if($loginMail == null) {
   <link rel="shortcut icon" type="image/svg" href="img/fineFood.svg" />
 </head>
 
-<body onhashchange=>
+<body onload="initApp(<?php echo $partnerId ?>)" onhashchange=>
   <!-- tabbar navigation -->
   <nav class="tabbar">
     <a class="nav-link" href="#/profile">
@@ -55,9 +55,9 @@ if($loginMail == null) {
     
   <section id="products" class="page col-pad">
   <input type="search" placeholder="Search" onkeyup="search(this.value)" onsearch="search('')">
-    <!-- <div id="product-grid">
+    <div id="product-grid">
 
-    </div> -->
+    </div>
   </section>
 
   <!-- create page --------------------------------------------------->
@@ -119,14 +119,7 @@ if($loginMail == null) {
     
   </section>
 
-  
-  <!-- loader  -->
-  <!-- <section id="loader">
-    <section class="spinner"></section>
-  </section> -->
-
-
-  <!-- SPA functionality  -->
+  <!-- SPA -->
   <script src="js/router.js"></script>
   <!-- main js file -->
   <script src="js/app.js"></script>

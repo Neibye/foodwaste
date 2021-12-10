@@ -24,25 +24,53 @@
 //   return data;
 // }
 
-// function appendProducts(products) {
-//   let htmlTemplate = "";
-//   for (let product of products) {
-//     htmlTemplate += /*html*/`
-//       <article class="${product.status}">
-//         <article onclick="showDetailView(${product.id})">
-//           <img src="${product.img}">
-//           <h2>${product.model}</h2>
-//           <h3>${product.brand}</h3>
-//           <p>Price: ${product.price} kr.</p>
-//           <p class="status">Status: ${product.status}</p>
-//         </article>
-//         <button onclick="goToEdit(${product.id})">Edit</button>
-//         <button onclick="deleteProduct(${product.id})">Delete</button>
-//       </article>
-//     `;
-//   }
-//   document.querySelector('#products-container').innerHTML = htmlTemplate;
-// }
+let _products = [];
+
+async function initApp(value) {
+  _products = await fetchData(value);
+  appendProducts(_products);
+}
+
+function appendProducts(products) {
+  let htmlTemplate = "";
+  for (let product of products) {
+    htmlTemplate += /*html*/ `
+      <article class="product">
+        <div class="product_content flex spaceBtwn">
+            <p>${product.foodName}</p>
+            <p>Price: ${product.newPrice}</p>
+        </div>
+        <div class="product_btns flex spaceBtwn">
+            <a class="greenBtn" onclick="goToEdit(${product.id})">Edit</a>
+            <a class="greyBtn" onclick="deleteProduct(${product.id})">Delete</a>
+        </div>
+      </article>
+    `;
+  }
+  document.querySelector("#product-grid").innerHTML = htmlTemplate;
+}
+
+async function fetchData(value) {
+  const response = await fetch(
+    `/backend/products_backend.php?partnerId=${value}`
+  );
+  const data = await response.json();
+  console.log(data);
+  return data;
+}
+
+function search(value) {
+  let searchQuery = value.toLowerCase();
+  console.log(searchQuery);
+  let filteredProducts = [];
+  for (let product of _products) {
+    let produktNavn = product.foodName.toLowerCase();
+    if (produktNavn.includes(searchQuery)) {
+      filteredProducts.push(product);
+    }
+  }
+  appendProducts(filteredProducts);
+}
 
 // function addNewProduct() {
 //   showLoader(true);
@@ -84,7 +112,6 @@
 //   }
 //   appendProducts(filteredProducts);
 // }
-
 
 // // function showHideOfStock(checked) {
 // //   const items = document.querySelectorAll('.outOfStock'); //grabbing all the products in the DOM
@@ -168,7 +195,7 @@
 // function deleteProduct(id) {
 //   const deleteProduct = confirm("Would you like to delete product?");
 //   if (deleteProduct) {
-//     // filter _products - all products that doesnt have the id 
+//     // filter _products - all products that doesnt have the id
 //     _products = _products.filter(product => product.id !== id);
 //     appendProducts(_products);
 //   }

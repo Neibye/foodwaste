@@ -254,3 +254,29 @@ form label {
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
+
+.spaceBtwn {
+  justify-content: space-between;
+}
+
+article.product {
+  background-color: var(--white);
+  margin: 20px 0;
+}
+
+article.product .product_content {
+  padding: 20px;
+}
+article.product .product_btns a {
+  width: 100%;
+  text-align: center;
+  padding: 13px 0;
+}
+
+.greenBtn {
+  background-color: var(--primary);
+}
+
+.greyBtn {
+  background-color: var(--grey);
+}
