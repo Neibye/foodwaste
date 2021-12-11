@@ -93,12 +93,29 @@ if($loginMail == null) {
 
   <!-- edit page ---------------------------------------------------->
   <section id="edit" class="page">
-    <form>
-      <input id="brandEdit" type="text" name="brand" placeholder="Brand">
-      <input id="modelEdit" type="text" name="model" placeholder="Model">
-      <input id="priceEdit" type="text" name="price" placeholder="Price">
-      <input id="imgEdit" type="text" name="img" placeholder="Image URL">
-      <button type="button" name="button" onclick="saveProduct()">Save</button>
+    <form class="updateForm" method="post" action="">
+      <input type="text" id="produktNavn" name="produktNavn" placeholder="Navn på produkt"/>
+      <select name="produktKategori" id="kategori">
+        <?php 
+        for ($i=0; $i < $foodGroupsLength; $i++) {
+        ?>
+          <option value="" disabled selected hidden>Kategori</option>
+          <option value="<?php echo $allFoodGroups[$i]["foodGroup"] ?>"> <?php echo $allFoodGroups[$i]["foodGroup"] ?> </option>
+        <?php
+        }
+        
+        ?>
+      </select>
+      <input type="number" id="antal" name="antal" placeholder="Antal"/>
+      <div class="udlob">
+      <label for="datoForUdlob">Udløbsdato</label>
+      <input type="date" id="datoForUdlob" name="datoForUdlob" placeholder="Udløbsdato"/>
+      </div>
+      <input type="text" id="oldPrice" name="oldPrice" placeholder="Gammel pris"/>
+      <input type="text" id="newPrice" name="newPrice" placeholder="Ny pris"/>
+      <div class="flex">
+      <input id="submitProduct" type="submit" onclick="" value="Opdater produkt" name="opretProdukt"/>
+      </div>
     </form>
   </section>
 

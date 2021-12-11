@@ -41,8 +41,9 @@ function appendProducts(products) {
             <p>Pris: ${product.newPrice}</p>
         </div>
         <div class="product_btns flex spaceBtwn">
-            <a class="editBtn" href="#/edit?product=${product.id}" href="update.php?produkt=${product.id}">Rediger</a>
-            <a class="deleteBtn" href="#/delete?produkt=${product.id}">Fjern</a>
+            <a class="editBtn" href="#/edit" onclick="goToEdit(${product.id})">Rediger</a>
+            <a class="deleteBtn" href="backend/deleteProdukt.php?product=${product.id}">Fjern</a>
+            <!-- href="#/edit?product=${product.id}" -->
         </div>
       </article>
     `;
@@ -70,6 +71,11 @@ function search(value) {
     }
   }
   appendProducts(filteredProducts);
+}
+
+function goToEdit(value) {
+  let updateForm = document.querySelector(".updateForm");
+  updateForm.action = `/backend/updateProdukt.php?product=${value}`;
 }
 
 // function addNewProduct() {
