@@ -131,9 +131,12 @@ img {
 .page {
   display: none;
   /*min heigh is screen heigh minus height of tab and top bar */
-  min-height: calc(100vh - 110px);
+  max-height: calc(100vh - 150px);
   background: var(--light-grey);
   animation: fadeIn 0.4s;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
   /* padding equals height of tabbar and topbar */
 }
 
@@ -442,4 +445,11 @@ button {
 .kategori option:first-of-type {
   font-size: 16px;
   color: var(--grey);
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: center;
 }

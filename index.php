@@ -61,9 +61,9 @@ if($loginMail == null) {
   </section>
 
   <!-- create page --------------------------------------------------->
-  <section id="add" class="page">
-    
-   <form class="addProductsForm col-pad" action="backend/uploadProduct.php" method="post">
+  <section id="add" class="page col-pad">
+    <h2>Opret produkt</h2>
+   <form class="addProductsForm" action="backend/uploadProduct.php" method="post">
       
       <input type="text" id="produktNavn" name="produktNavn" placeholder="Navn på produkt"/>
       <select name="produktKategori" id="kategori">
@@ -92,7 +92,8 @@ if($loginMail == null) {
   </section>
 
   <!-- edit page ---------------------------------------------------->
-  <section id="edit" class="page">
+  <section id="edit" class="page col-pad">
+    <h2>Opdater produkt</h2>
     <form class="updateForm" method="post" action="">
       <input type="text" id="produktNavn" name="produktNavn" placeholder="Navn på produkt"/>
       <select name="produktKategori" id="kategori">
@@ -122,7 +123,7 @@ if($loginMail == null) {
   <!-- Profile page ------------------------------------------------>
 <section id="profile" class="page">
   <div class="profilepage-content col-pad">
-    <p>Skift kodeord</p>
+    <h2>Skift kodeord</h2>
     <form action="backend/changePassword.php" method="post">
       <input name="nytKodeord" placeholder="Nyt kodeord" type="password">
       <input name="gentagKodeord" placeholder="Gentag kodeord" type="password">
