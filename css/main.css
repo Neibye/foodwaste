@@ -429,9 +429,6 @@ button {
   border-radius: 6px;
 }
 
-.profilepage-content {
-  margin-top: 15vw;
-}
 .profilepage-content p {
   font-size: 20px;
 }
@@ -452,4 +449,8 @@ h2 {
   font-weight: 400;
   margin-bottom: 20px;
   text-align: center;
+}
+
+.submitBtn {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
