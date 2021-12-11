@@ -39,7 +39,7 @@ if($loginMail == null) {
     </a>
     <a class="nav-link" href="#/products">
       <div><img src="img/home.png" alt="plus image"></div>
-      <div><p>Home</p></div>
+      <div><p>Hjem</p></div>
     </a>
     <a class="nav-link" href="#/add">
       <div><img src="img/plus.png" alt="plus image"></div>
@@ -66,10 +66,11 @@ if($loginMail == null) {
    <form class="addProductsForm col-pad" action="backend/uploadProduct.php" method="post">
       
       <input type="text" id="produktNavn" name="produktNavn" placeholder="Navn på produkt"/>
-      <select name="produktKategori" id="">
+      <select name="produktKategori" id="kategori">
         <?php 
         for ($i=0; $i < $foodGroupsLength; $i++) {
         ?>
+          <option value="" disabled selected hidden>Kategori</option>
           <option value="<?php echo $allFoodGroups[$i]["foodGroup"] ?>"> <?php echo $allFoodGroups[$i]["foodGroup"] ?> </option>
         <?php
         }
@@ -101,23 +102,19 @@ if($loginMail == null) {
     </form>
   </section>
 
-  <!-- edit page -->
-  
-
   <!-- Profile page ------------------------------------------------>
 <section id="profile" class="page">
-<div class="profilepage-content col-pad">
-  <p>Skift kodeord</p>
-  <form action="backend/changePassword.php" method="post">
-    <input name="nytKodeord" placeholder="Nyt kodeord" type="password">
-    <input name="gentagKodeord" placeholder="Gentag kodeord" type="password">
-    <input class="submitBtn" id="changePasswordButton" type="submit" value="Skift kodeord" placeholder="Skift kodeord">
-    <a id="logoutBtn" href="backend/backend.php?id=logout">Logout</a>
-  </form>
-  <img class="profileImg" src="img/fineFood.svg" alt="Logo fineFood">
-</div>
-    
-  </section>
+  <div class="profilepage-content col-pad">
+    <p>Skift kodeord</p>
+    <form action="backend/changePassword.php" method="post">
+      <input name="nytKodeord" placeholder="Nyt kodeord" type="password">
+      <input name="gentagKodeord" placeholder="Gentag kodeord" type="password">
+      <input class="submitBtn" id="changePasswordButton" type="submit" value="Skift kodeord" placeholder="Skift kodeord">
+      <a id="logoutBtn" href="backend/backend.php?id=logout">Logout</a>
+    </form>
+    <img class="profileImg" src="img/fineFood.svg" alt="Logo fineFood">
+  </div>
+</section>
 
   <!-- SPA -->
   <script src="js/router.js"></script>

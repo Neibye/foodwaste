@@ -38,11 +38,11 @@ function appendProducts(products) {
       <article class="product">
         <div class="product_content flex spaceBtwn">
             <p>${product.foodName}</p>
-            <p>Price: ${product.newPrice}</p>
+            <p>Pris: ${product.newPrice}</p>
         </div>
         <div class="product_btns flex spaceBtwn">
-            <a class="greenBtn" onclick="goToEdit(${product.id})">Edit</a>
-            <a class="greyBtn" onclick="deleteProduct(${product.id})">Delete</a>
+            <a class="editBtn" href="#/edit?product=${product.id}" href="update.php?produkt=${product.id}">Rediger</a>
+            <a class="deleteBtn" href="#/delete?produkt=${product.id}">Fjern</a>
         </div>
       </article>
     `;
