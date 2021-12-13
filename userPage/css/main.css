@@ -1,0 +1,537 @@
+/* ---------- root variables ---------- */
+:root {
+  --primary: #026b00;
+  --secondary: #a60000;
+  --lightgrey: #f7f7f7;
+  --buttonGrey: #dddddd;
+  --grey: #868686;
+  --darkgrey: #606060;
+  --textColor: #333333;
+  --white: #ffffff;
+}
+
+/* ---------- general styling ---------- */
+html {
+  color: var(--textColor);
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  width: 100%;
+}
+* {
+  margin: 0;
+}
+
+body {
+  background-color: var(--lightgrey);
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+h3 {
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0.5em 0 0.2em;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- topbar styling ---------- */
+.topbar {
+  background-color: var(--white);
+  color: var(--textColor);
+  padding: 13.5px;
+  position: sticky;
+  text-transform: capitalize;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.topbar a {
+  text-decoration: none;
+  color: var(--text-color-light);
+  position: absolute;
+  top: 20px;
+}
+
+.topbar a.left {
+  left: 20px;
+}
+
+.topbar a.right {
+  right: 20px;
+}
+
+/* ---------- tabbar styling ---------- */
+.tabbar {
+  display: flex;
+  position: fixed;
+  justify-content: space-evenly;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  height: 80px;
+}
+
+/* Style the links inside the navigation bar */
+.tabbar a {
+  background-color: var(--white);
+  display: inline-block;
+  color: var(--text-color-light);
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: capitalize;
+  border-radius: 6px 6px 0 0;
+  height: 100%;
+  width: calc((100% / 3));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tabbar a img {
+  width: 20px;
+  margin-bottom: 10px;
+}
+
+/* Change the color of links on hover */
+.tabbar a:hover {
+  background-color: var(--light-grey);
+  color: var(--text-color-dark);
+}
+
+/* Add a color to the active/current link */
+.tabbar a.active {
+  background-color: var(--buttonGrey);
+  color: var(--textColor);
+}
+
+/* ---------- page styling ---------- */
+.page {
+  display: none;
+  /*min heigh is screen heigh minus height of tab and top bar */
+  max-height: calc(100vh - 150px);
+  background: var(--light-grey);
+  animation: fadeIn 0.4s;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  /* padding equals height of tabbar and topbar */
+}
+
+/* input form stryling */
+form {
+  margin: auto;
+}
+
+form button {
+  padding: 12px 15px;
+  font-size: 1em;
+  width: 100%;
+}
+
+button {
+  font-weight: 300;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 0;
+  color: var(--text-color-light);
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+}
+
+input {
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+  display: block;
+  background: var(--white);
+  border: 0;
+}
+
+.addProductsForm {
+  position: relative;
+}
+#datoForUdlob {
+  color: var(--grey);
+  font-size: 14px;
+}
+input::placeholder {
+  color: red;
+  font-size: 14px;
+}
+
+.flex {
+  display: flex;
+}
+#submitProduct {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.udlob {
+  position: relative;
+}
+
+form label {
+  padding-left: 19px;
+  font-size: 14px;
+  color: var(--grey);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "nameBox nameBox"
+    "editBox deleteBox";
+}
+.nameBox {
+  grid-area: nameBox;
+  background-color: white;
+  border-radius: 5px 5px 0px 0px;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 4px 0px 12px;
+}
+
+.editBox {
+  grid-area: editBox;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 0px 0px 0px 5px;
+  height: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.deleteBox {
+  grid-area: deleteBox;
+  background-color: var(--buttonGrey);
+  border-radius: 0px 0px 5px 0px;
+  height: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.spaceBtwn {
+  justify-content: space-between;
+}
+
+article.product {
+  background-color: var(--white);
+  margin: 20px 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 4px 0px 12px;
+  border-radius: 6px;
+  position: relative;
+}
+
+article.product .product_content {
+  padding: 20px;
+}
+article.product .product_btns a {
+  width: 100%;
+  text-align: center;
+  padding: 13px 0;
+}
+
+.editBtn {
+  background-color: var(--primary);
+  color: white;
+  border: 1px solid var(--primary);
+  border-radius: 0px 0px 0px 6px;
+}
+
+.deleteBtn {
+  color: #026b00;
+  border: 1px solid var(--primary);
+  border-radius: 0px 0px 6px 0px;
+}
+
+.profilepage {
+  background-color: #f7f7f7;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+}
+
+form h1 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+form button {
+  padding: 12px 15px;
+  font-size: 1em;
+  width: 100%;
+  max-width: 350px;
+}
+
+button {
+  font-weight: 300;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 0;
+  color: var(--text-color-light);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+}
+
+input {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 17px 19px;
+  box-sizing: border-box;
+  display: block;
+  background: #ffffff;
+  border: 0;
+  box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.05) inset;
+  border-radius: 6px;
+}
+
+select {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 17px 19px;
+  box-sizing: border-box;
+  display: block;
+  background: #ffffff;
+  border: 0;
+  box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.05) inset;
+  border-radius: 6px;
+}
+
+input::placeholder {
+  font-size: 16px;
+  color: #868686;
+}
+.changePasswordBtn {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: #c6c6c6;
+  color: black;
+  font-size: 16px;
+}
+.col-pad {
+  margin: auto;
+  padding: 0 12%;
+  height: 100%;
+  margin-bottom: 32px;
+}
+
+#changePasswordButton {
+  background-color: #c6c6c6;
+  text-transform: none;
+  border-radius: 6px;
+}
+
+form {
+  margin-bottom: 52px;
+}
+form h1 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+form button {
+  padding: 12px 15px;
+  font-size: 1em;
+  width: 100%;
+  max-width: 350px;
+}
+
+button {
+  font-weight: 300;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 0;
+  color: var(--text-color-light);
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+}
+
+#changePasswordH3 {
+  text-align: left;
+}
+
+#profileLogo {
+  width: 60%;
+}
+
+#logoutBtn {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: #a60000;
+  color: white;
+  font-size: 16px;
+  padding: 12px 15px;
+  font-size: 1em;
+  max-width: 350px;
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.profilepage-content p {
+  font-size: 20px;
+}
+
+.profileImg {
+  display: block;
+  width: 60%;
+  margin: auto;
+}
+
+.kategori option:first-of-type {
+  font-size: 16px;
+  color: var(--grey);
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 20px;
+  text-align: center;
+}
+
+.submitBtn {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.product_price {
+  text-align: right;
+}
+.newPrice {
+  color: var(--primary);
+  font-weight: 700;
+}
+.product_partner {
+  font-size: 14px;
+  color: var(--grey);
+}
+.product_status {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.redStatus {
+  background-color: red;
+}
+.yellowStatus {
+  background-color: #ffb800;
+}
+.greenStatus {
+  background-color: green;
+}
+
+.scoreflex h2 {
+  text-align: left;
+}
+
+#score h3 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.greenprice {
+  text-align: right;
+  float: right;
+  color: green;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.smMargin {
+  margin-bottom: 10px;
+}
+.nmMargin {
+  margin-bottom: 20px;
+}
+.alignCenter {
+  align-items: center;
+}
+.scoreBox {
+  text-align: left;
+  box-shadow: rgba(0, 0, 0, 0.1) 4px 0px 12px;
+  position: relative;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.scoreBox img {
+  width: 32px;
+  height: 32px;
+}
+
+.fade {
+  opacity: 30%;
+}
+
+.secondaryText {
+  color: #868686;
+  font-size: 14px;
+}
+
+.greenTxt {
+  color: var(--primary);
+}

@@ -1,0 +1,136 @@
+.usergrid {
+  display: grid;
+  grid-template-columns: 65% 25% 10%;
+  margin: 20px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 4px 0px 12px;
+  padding: 18px 20px;
+  text-align: left;
+}
+
+.usercontainer1 {
+  text-align: left;
+}
+
+.usercontainer2 {
+  margin: auto;
+}
+
+#proName {
+  font-size: 16px;
+  color: black;
+}
+
+#proSted {
+  font-size: 10px;
+  color: #868686;
+}
+
+#befPrice {
+  font-size: 12px;
+}
+
+#aftPrice {
+  font-size: 12px;
+  color: #026b00;
+}
+
+.topbar img {
+  width: 40%;
+}
+
+#flexPlaceQues {
+  display: grid;
+  grid-template-columns: 90% 10%;
+}
+
+#question {
+  width: 24px;
+  display: block;
+  margin: auto;
+}
+
+#menupunkter {
+  margin: auto;
+  text-align: center;
+}
+
+#greendot {
+  background-color: green;
+  width: 6px;
+  height: 6px;
+  border-radius: 1000px;
+}
+
+#yellowdot {
+  background-color: darkgoldenrod;
+  width: 6px;
+  height: 6px;
+  border-radius: 1000px;
+}
+
+#reddot {
+  background-color: red;
+  width: 6px;
+  height: 6px;
+  border-radius: 1000px;
+}
+
+/* ---------- Score ---------- */
+
+#highscoreheader {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  margin: 40px 0px;
+}
+
+.scoreflex {
+  padding: 20px;
+}
+
+.scoreflex h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.scoreflex2 {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.scoreflex2 h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: right;
+}
+
+#greenprice {
+  color: green;
+  font-size: 20px;
+}
+
+#greytext {
+  color: #868686;
+  font-size: 18px;
+}
+
+#fadegold {
+  opacity: 30%;
+}
+#fadesilver {
+  opacity: 30%;
+}
+
+.medals {
+  margin: 5px;
+}
+
+/* ---------- Profile Page ---------- */
+
+#skiftkodeord {
+  margin: 20px 0px;
+}

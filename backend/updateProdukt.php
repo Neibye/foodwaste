@@ -36,7 +36,7 @@ $oldPrice = $_POST['oldPriceEdit'];
 $newPrice = $_POST['newPriceEdit'];
 $partnerId = $_SESSION['partnerIdEdit'];
 
-$updateProductsql = "UPDATE listedproducts SET partnerId = '$partnerId', foodName = '$produktNavn', foodGroup = '$produktKategori', quantity = '$antal', expDate = '$datoForUdlob', oldPrice = '$oldPrice', newPrice = '$newPrice' WHERE id = '$produktId'";
+$updateProductsql = "UPDATE listedProducts SET partnerId = '$partnerId', foodName = '$produktNavn', foodGroup = '$produktKategori', quantity = '$antal', expDate = '$datoForUdlob', oldPrice = '$oldPrice', newPrice = '$newPrice' WHERE id = '$produktId'";
 // $listProductSQL = "INSERT INTO listedproducts (partnerId, foodName, foodGroup, quantity, expDate, oldPrice, newPrice) 
 // VALUES ('$partnerId', '$produktNavn', '$produktKategori', '$antal', '$datoForUdlob', '$oldPrice', '$newPrice')";
 

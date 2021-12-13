@@ -109,13 +109,13 @@ if($loginMail == null) {
       </select>
       <input type="number" id="antalEdit" name="antalEdit" placeholder="Antal"/>
       <div class="udlob">
-      <label for="datoForUdlob">Udløbsdato</label>
-      <input type="date" id="datoForUdlobEdit" name="datoForUdlobEdit" placeholder="Udløbsdato"/>
+        <label for="datoForUdlobEdit">Udløbsdato</label>
+        <input type="date" id="datoForUdlobEdit" name="datoForUdlobEdit" placeholder="Udløbsdato"/>
       </div>
       <input type="text" id="oldPriceEdit" name="oldPriceEdit" placeholder="Gammel pris"/>
       <input type="text" id="newPriceEdit" name="newPriceEdit" placeholder="Ny pris"/>
       <div class="flex">
-      <input id="submitProductEdit" type="submit" onclick="" value="Opdater produkt" name="opretProdukt"/>
+        <input id="opdaterProductEdit" type="submit" value="Opdater produkt" name="opdaterProdukt"/>
       </div>
     </form>
   </section>
