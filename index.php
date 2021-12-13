@@ -95,8 +95,8 @@ if($loginMail == null) {
   <section id="edit" class="page col-pad">
     <h2>Opdater produkt</h2>
     <form class="updateForm" method="post" action="">
-      <input type="text" id="produktNavn" name="produktNavn" placeholder="Navn på produkt"/>
-      <select name="produktKategori" id="kategori">
+      <input type="text" id="produktNavnEdit" name="produktNavnEdit" placeholder="Navn på produkt"/>
+      <select name="produktKategoriEdit" id="kategoriEdit">
         <?php 
         for ($i=0; $i < $foodGroupsLength; $i++) {
         ?>
@@ -107,15 +107,15 @@ if($loginMail == null) {
         
         ?>
       </select>
-      <input type="number" id="antal" name="antal" placeholder="Antal"/>
+      <input type="number" id="antalEdit" name="antalEdit" placeholder="Antal"/>
       <div class="udlob">
       <label for="datoForUdlob">Udløbsdato</label>
-      <input type="date" id="datoForUdlob" name="datoForUdlob" placeholder="Udløbsdato"/>
+      <input type="date" id="datoForUdlobEdit" name="datoForUdlobEdit" placeholder="Udløbsdato"/>
       </div>
-      <input type="text" id="oldPrice" name="oldPrice" placeholder="Gammel pris"/>
-      <input type="text" id="newPrice" name="newPrice" placeholder="Ny pris"/>
+      <input type="text" id="oldPriceEdit" name="oldPriceEdit" placeholder="Gammel pris"/>
+      <input type="text" id="newPriceEdit" name="newPriceEdit" placeholder="Ny pris"/>
       <div class="flex">
-      <input id="submitProduct" type="submit" onclick="" value="Opdater produkt" name="opretProdukt"/>
+      <input id="submitProductEdit" type="submit" onclick="" value="Opdater produkt" name="opretProdukt"/>
       </div>
     </form>
   </section>
