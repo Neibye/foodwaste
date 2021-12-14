@@ -10,7 +10,6 @@
         die("Could not connect to the MySQL server: " . mysqli_connect_error());
     }
 
-
 $selectUsers = "SELECT * FROM partners";
 $result = mysqli_query($mySQL, $selectUsers);
 $users = array();

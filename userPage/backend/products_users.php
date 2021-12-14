@@ -76,7 +76,7 @@ class Product {
         return $this->postNr;
     }
 
-// Herunder laver jeg nogle funktioner som opdatere/ændre mine objekters variablers properties.
+// Herunder laver vi nogle funktioner som opdaterer/ændrer vores objekters variablers properties.
 
     public function SetId($newId) {
         $this->id = $newId;
@@ -114,9 +114,6 @@ class Product {
 
 }
 
-
-
-
 $test = "test";
 if (isset($test)) {
     $productsSQL = "SELECT listedProducts.id, partners.navn, listedProducts.foodName, listedProducts.foodGroup, listedProducts.quantity, listedProducts.expDate, listedProducts.oldPrice, listedProducts.newPrice, postnrtable.postNr FROM listedProducts INNER JOIN partners ON listedProducts.partnerId = partners.id INNER JOIN postnrtable ON partners.postnr = postnrtable.id";
@@ -134,28 +131,6 @@ if (isset($test)) {
 } else {
     $json["error"] = "Ingen er logget ind";
 }
-// $productsSQL = "SELECT * FROM listedProducts";
-//     $products = [];
-//     $productsResult = $mySQL->query($productsSQL);
-    
-//     while($row = $productsResult->fetch_object("Product")) {
-//         if(!in_array($row, $products)) {
-//             $products[] = $row;
-//         }
-//     }
-//     $json = [];
-//     foreach ($products as $product) {
-//         $json[] = $product->getArray();
-//     }
-
 
 echo json_encode($json);
 ?>
-
-
-
-
-
-
-
-

@@ -11,7 +11,6 @@ include("mysql.php");
         exit;
     }
 
-
 $foodGroupsSQL = "SELECT DISTINCT foodGroup FROM foodlist";
 
 $allFoodGroups = [];
@@ -24,16 +23,8 @@ while($row = $foodGroupsResult->fetch_assoc()) {
     }
 }
 
-
 $_SESSION['allFoodGroups'] = $allFoodGroups;
 
-
-
-
-
-
-
-             
 $loginMail = $_POST['loginMail'];
 $loginPassword = $_POST['loginPassword'];
 
