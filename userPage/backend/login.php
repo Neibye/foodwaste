@@ -46,7 +46,9 @@ if(isset($_POST)) {
     $userLoginResult = $mySQL->query($userLoginSQL)->fetch_object();
     $hashkey = $userLoginResult->userPassword;
     $passVerify = password_verify($loginPassword, $hashkey);
-    if ($passVerify && $userLoginResult->mail = $loginMail) {
+
+
+    if ($passVerify && $userLoginResult->mail == $loginMail) {
         $partnerId = $userLoginResult->id;
         $userNameSQL = "SELECT navn, id FROM partners WHERE partnerLogin = $partnerId";
         $userNameResult = $mySQL->query($userNameSQL)->fetch_object();

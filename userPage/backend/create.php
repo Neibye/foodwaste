@@ -41,9 +41,10 @@ if ($_POST['action'] == "create") {
     $tlfNr = $_POST['tlfNr'];
     $mail = $_POST['mail'];
     $lowerCaseMail = strtolower($mail);
-    $password = $_POST['password'];
+    $password = $_POST['userPassword'];
 
     $passEncrypt = password_hash($password, PASSWORD_DEFAULT);
+
 
     $CreateNewUser = "CALL CreateNewUser('$navn', '$tlfNr', '$postnr', '$by', '$mail', '$passEncrypt')";
 

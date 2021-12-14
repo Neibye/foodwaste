@@ -1,8 +1,15 @@
 <?php
-    $server = "127.0.0.1";
-    $username = "root";
+    // $server = "127.0.0.1";
+    // $username = "root";
+    // $password = "3Xp75chr";
+    // $database = "foodwaste";
+
+    $server = "mysql39.unoeuro.com";
+    $username = "nicklaseibye_dk";
     $password = "3Xp75chr";
-    $database = "foodwaste";
+    $database = "nicklaseibye_dk_db_foodwaste";
+
+
 
     $mySQL = new mysqli($server, $username, $password, $database);
 

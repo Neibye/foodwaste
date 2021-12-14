@@ -27,16 +27,24 @@ if($_POST["newPriceEdit"] == "") {
     exit;
 }
 
-$produktId = $_GET['productEdit'];
+$produktId = $_GET['product'];
+//echo $produktId . "<br>";
 $produktNavn = $_POST['produktNavnEdit'];
+//echo $produktNavn . "<br>";
 $produktKategori = $_POST['produktKategoriEdit'];
+//echo $produktKategori  . "<br>";
 $antal = $_POST['antalEdit'];
+//echo $antal . "<br>";
 $datoForUdlob = $_POST['datoForUdlobEdit'];
+//echo $datoForUdlob . "<br>";
 $oldPrice = $_POST['oldPriceEdit'];
+//echo $oldPrice . "<br>";
 $newPrice = $_POST['newPriceEdit'];
-$partnerId = $_SESSION['partnerIdEdit'];
+//echo $newPrice . "<br>";
+$partnerId = $_SESSION['partnerId'];
+//echo $partnerId . "<br>";
 
-$updateProductsql = "UPDATE listedProducts SET partnerId = '$partnerId', foodName = '$produktNavn', foodGroup = '$produktKategori', quantity = '$antal', expDate = '$datoForUdlob', oldPrice = '$oldPrice', newPrice = '$newPrice' WHERE id = '$produktId'";
+$updateProductsql = "UPDATE listedProducts SET foodName = '$produktNavn', foodGroup = '$produktKategori', quantity = '$antal', expDate = '$datoForUdlob', oldPrice = '$oldPrice', newPrice = '$newPrice' WHERE id = '$produktId'";
 // $listProductSQL = "INSERT INTO listedproducts (partnerId, foodName, foodGroup, quantity, expDate, oldPrice, newPrice) 
 // VALUES ('$partnerId', '$produktNavn', '$produktKategori', '$antal', '$datoForUdlob', '$oldPrice', '$newPrice')";
 

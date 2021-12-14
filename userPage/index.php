@@ -1,4 +1,6 @@
-<!-- session_start();
+<?php
+
+session_start();
   $loginMail = $_SESSION['post_loginMail'];
   $partnerName = $_SESSION['partnerName'];
   $partnerId = $_SESSION['partnerId'];
@@ -10,8 +12,8 @@ if($loginMail == null) {
   header("location: loginpage.php");
   session_destroy();
   exit;
-} else { -->
-  
+} else {
+?>
 <!doctype html>
 <html lang="en">
 
@@ -130,3 +132,6 @@ if($loginMail == null) {
 
 </body>
 </html>
+<?php
+}
+?>
