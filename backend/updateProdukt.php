@@ -2,6 +2,7 @@
 session_start();
 include("mysql.php");
 
+// Hvis feltet er tomt = error
 if($_POST["produktNavnEdit"] == "") {
     header("location: loginpage.php?error=produktNavn");
     exit;
@@ -27,27 +28,20 @@ if($_POST["newPriceEdit"] == "") {
     exit;
 }
 
+// Her laver vi variabler med de forskellige input fields values, som vi henter via POST, GET & Session
 $produktId = $_GET['product'];
-//echo $produktId . "<br>";
 $produktNavn = $_POST['produktNavnEdit'];
-//echo $produktNavn . "<br>";
 $produktKategori = $_POST['produktKategoriEdit'];
-//echo $produktKategori  . "<br>";
 $antal = $_POST['antalEdit'];
-//echo $antal . "<br>";
 $datoForUdlob = $_POST['datoForUdlobEdit'];
-//echo $datoForUdlob . "<br>";
 $oldPrice = $_POST['oldPriceEdit'];
-//echo $oldPrice . "<br>";
 $newPrice = $_POST['newPriceEdit'];
-//echo $newPrice . "<br>";
 $partnerId = $_SESSION['partnerId'];
-//echo $partnerId . "<br>";
 
+// Her laver vi en variabel, som inderholder vores kald til vores update kald
 $updateProductsql = "UPDATE listedProducts SET foodName = '$produktNavn', foodGroup = '$produktKategori', quantity = '$antal', expDate = '$datoForUdlob', oldPrice = '$oldPrice', newPrice = '$newPrice' WHERE id = '$produktId'";
-// $listProductSQL = "INSERT INTO listedproducts (partnerId, foodName, foodGroup, quantity, expDate, oldPrice, newPrice) 
-// VALUES ('$partnerId', '$produktNavn', '$produktKategori', '$antal', '$datoForUdlob', '$oldPrice', '$newPrice')";
 
+// Hvis alt er udfyldt skal det køre igennem, ellers failed.
 if (isset($_POST)) {
     $mySQL->query($updateProductsql);
     header("location: ../index.php?update=succes");
@@ -56,6 +50,5 @@ if (isset($_POST)) {
     header("location: ../index.php?update=failed");
     exit;
 }
-
 
 ?>
