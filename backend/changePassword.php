@@ -19,9 +19,9 @@ $skiftPassword = "UPDATE partnerlogin SET partnerPassword = '$passEncrypt' WHERE
 if (isset($_POST)) {
     if ($nytKodeord == $gentagKodeord) {
         mysqli_query($mySQL, $skiftPassword);
-        header("location: ../index.php");
+        header("location: ../index.php?changepassword=succces");
     } else
-        header("location: ../index.php=changepassword=failed");
+        header("location: ../index.php?changepassword=failed");
 }
 
 ?>

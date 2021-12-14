@@ -43,7 +43,7 @@ if ($_POST['action'] == "create") {
     $passEncrypt = password_hash($password, PASSWORD_DEFAULT);
 
 // Her laver vi en variabel, som inderholder vores kald til vores procedure
-    $CreateNewPartner = "CALL CreateNewPartner('$name', '$postnr', '$by', '$mail', '$passEncrypt')";
+    $CreateNewPartner = "CALL createNewPartner('$name', '$postnr', '$by', '$mail', '$passEncrypt')";
 
 // Hvis det her kald er TRUE, så bliver man sendt til login siden (succes) - Ellers failed
     if ($mySQL->query($CreateNewPartner) === TRUE) {
