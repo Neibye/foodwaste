@@ -40,7 +40,7 @@ if ($_POST['action'] == "create") {
 
     $passEncrypt = password_hash($password, PASSWORD_DEFAULT);
 
-    $CreateNewPartner = "CALL CreateNewPartner('$name', '$postnr', '$by', '$mail', '$passEncrypt')";
+    $CreateNewPartner = "CALL createNewPartner('$name', '$postnr', '$by', '$mail', '$passEncrypt')";
 
     if ($mySQL->query($CreateNewPartner) === TRUE) {
         header("location: ../loginpage.php?signup=succes");

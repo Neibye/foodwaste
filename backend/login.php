@@ -37,7 +37,7 @@ $_SESSION['allFoodGroups'] = $allFoodGroups;
     $loginMail = $_POST['loginMail'];
     $loginPassword = $_POST['loginPassword'];
 
-    $partnerLoginSQL = "SELECT mail, partnerPassword, id FROM partnerLogin WHERE mail = '$loginMail'";
+    $partnerLoginSQL = "SELECT mail, partnerPassword, id FROM partnerlogin WHERE mail = '$loginMail'";
     
         
     $_SESSION['post_loginMail'] = strtolower($loginMail);

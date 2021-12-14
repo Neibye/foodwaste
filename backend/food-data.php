@@ -1,6 +1,6 @@
 <?php
 // include("mysql.php");
-// $jsonFile = file_get_contents("json/Food Database.json");
+// $jsonFile = file_get_contents("../json/Food Database.json");
 // $jsonArray = json_decode($jsonFile, true);
 
 // $array = $jsonArray["data"];
