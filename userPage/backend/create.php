@@ -57,10 +57,4 @@ if ($_POST['action'] == "create") {
     } 
 }
 
-
-
-
 ?>
-
-
-

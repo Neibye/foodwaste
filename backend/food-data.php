@@ -1,4 +1,7 @@
 <?php
+
+// Indsætter foodlist i databasen. Er kommenteret ud, da den kun skal bruges en gang.
+
 // include("mysql.php");
 // $jsonFile = file_get_contents("../json/Food Database.json");
 // $jsonArray = json_decode($jsonFile, true);
@@ -23,4 +26,5 @@
 //     VALUES ('$group', '$name', '$kj', '$kcal', '$protein', '$fat', '$carb', '$fiber', '$waste')"; 
 //     $mySQL->query($sql);
 // }
+
 ?>
