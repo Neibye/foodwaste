@@ -21,6 +21,7 @@
                     <input type="text" name="loginMail" required placeholder="E-mail">
                     <input type="password" minlength="8" name="loginPassword" required placeholder="Password">
                     <input class="submitBtn" type="submit" value="Login">
+                    <p>Har du ikke allerede en bruger? <a href="registration.php">Opret her</a></p>
                 </form>
             </div>
         </div>

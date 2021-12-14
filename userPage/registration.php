@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
     <title>Opret bruger</title>
 </head>
 <body>
@@ -22,7 +21,7 @@
                         <input type="text" name="mail" required placeholder="Mail"><br><br>
                         <input type="password" name="userPassword" required placeholder="Kodeord"><br><br>
                         <input type="submit" value="Create user">
-                        <p>Har du allerede en bruger? <a href="index.php">Login her</a></p> 
+                        <p>Har du allerede en bruger? <a href="loginpage.php">Login her</a></p> 
                 </form>
             </div>
         </div>
