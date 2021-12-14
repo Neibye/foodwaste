@@ -8,7 +8,7 @@ $nytKodeord = $_POST['nytKodeord'];
 $gentagKodeord = $_POST['gentagKodeord'];
 
 $passEncrypt = password_hash($nytKodeord, PASSWORD_DEFAULT);
-$skiftPassword = "UPDATE userlogin SET userPassword = '$passEncrypt' WHERE mail = '$loginMail'";
+$skiftPassword = "UPDATE partnerlogin SET partnerPassword = '$passEncrypt' WHERE mail = '$loginMail'";
 
 
 if (isset($_POST)) {

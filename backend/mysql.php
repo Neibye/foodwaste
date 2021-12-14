@@ -1,13 +1,13 @@
 <?php
-    // $server = "127.0.0.1";
-    // $username = "root";
-    // $password = "3Xp75chr";
-    // $database = "foodwaste";
-
-    $server = "mysql39.unoeuro.com";
-    $username = "nicklaseibye_dk";
+    $server = "127.0.0.1";
+    $username = "root";
     $password = "3Xp75chr";
-    $database = "nicklaseibye_dk_db_foodwaste";
+    $database = "foodwaste";
+
+    // $server = "mysql39.unoeuro.com";
+    // $username = "nicklaseibye_dk";
+    // $password = "3Xp75chr";
+    // $database = "nicklaseibye_dk_db_foodwaste";
 
 
 
